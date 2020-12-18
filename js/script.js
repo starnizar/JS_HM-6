@@ -57,7 +57,13 @@ function ex_07 () {
 function ex_08 () {
     let num = prompt('Введите номер телефона');
     let reg = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-    console.log(reg.test(num));
     if (reg.test(num) == true) {alert('Okey')}
+    else {alert('Error!!!')}
+}
+
+function ex_09 () {
+    let mail = prompt('Введите адрес электронной почты'),
+        reg = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+    if (reg.test(mail) == true) {alert('Okey')}
     else {alert('Error!!!')}
 }
